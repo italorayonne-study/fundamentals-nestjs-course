@@ -30,7 +30,7 @@ export class AuthController {
 
   @Post('forget')
   async forget(@Body() body: AuthForgetDto) {
-    throw new NotImplementedException();
+    return this.authService.forget(body);
   }
 
   @Post('reset')
