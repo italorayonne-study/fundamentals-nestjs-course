@@ -23,12 +23,12 @@ import { EjsAdapter } from '@nestjs-modules/mailer/dist/adapters/ejs.adapter';
         host: process.env.SMTP_HOST,
         port: Number(process.env.SMTP_PORT),
         auth: {
-          user: 'rayoneitalo@gmail.com',
-          pass: 'rwvqzzccgkgjbkzj',
+          user: process.env.SMTP_USERNAME,
+          pass: process.env.SMTP_PASSWORD,
         },
       },
       defaults: {
-        from: `"nest-modules" <rayoneitalo@gmail.com>'`,
+        from: `"nest-modules" <${process.env.SMTP_USERNAME}>`,
       },
       template: {
         dir: __dirname + '/templates',

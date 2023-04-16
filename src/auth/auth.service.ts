@@ -1,3 +1,4 @@
+import { MailerService } from '@nestjs-modules/mailer';
 import {
   HttpException,
   HttpStatus,
@@ -6,10 +7,8 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from 'src/database/prisma.service';
-import { AuthLoginDto } from './dto/auth-login.dto';
-import { MailerService } from '@nestjs-modules/mailer';
 import { AuthForgetDto } from './dto/auth-forget.dto';
-import { log } from 'console';
+import { AuthLoginDto } from './dto/auth-login.dto';
 
 @Injectable()
 export class AuthService {
